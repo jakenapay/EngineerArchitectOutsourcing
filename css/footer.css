@@ -1,0 +1,76 @@
+footer {
+    font-family: var(--font-family-text);
+    text-decoration: none;
+    list-style-type: none;
+    background-color: #000;
+
+    padding: 25x 0px 25px;
+}
+
+footer ul {
+    margin: 20px 5px 20px;
+    padding: 0;
+}
+
+footer ul li {
+    text-decoration: none;
+    list-style-type: none;
+    color: #fff;
+}
+
+footer ul li i,
+.footer-links ul li {
+    padding: 10px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px 10px;
+    text-transform: uppercase;
+}
+
+footer h2[class*="title"] {
+    color: #fff;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    border-bottom: 0.17rem solid #fff;
+    font-family: var(--font-family-header);
+}
+
+footer div[class*="col"] {
+    padding: 50px 25px 50px;
+}
+
+.footer-hr {
+    height: 0.5rem;
+    color: #fff;
+}
+
+footer #tmpLogo {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+footer .footer-contact {
+    text-align: center;
+}
+
+footer .footer-contact i {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    padding: 10px;
+    margin: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+footer #footer-copyright {
+    color: #fff;
+    text-align: center;
+    margin-top: .5rem;
+    font-weight: 200;
+    font-size: 0.9rem;
+
+}
