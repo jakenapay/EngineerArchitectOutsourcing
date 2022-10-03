@@ -1,0 +1,36 @@
+/* start of first content */
+#first-content {
+    padding: var(--padding-contents-m);
+    margin-top: 100px;
+}
+
+#first-content .row .wrapper {
+    margin: 5px 0px 5px;
+    overflow: hidden;
+    text-align: center;
+}
+
+#first-content .header-title {
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    #first-content {
+        margin-top: 100px;
+    }
+
+    #first-content .row .wrapper {
+        margin: 0px;
+    }
+
+    #first-content .header-title {
+        text-align: center;
+        font-size: 3.5rem;
+        padding-bottom: 1rem;
+        font-family: var(--font-family-header);
+    }
+}
+
+/* end of first content  */
