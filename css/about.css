@@ -1,0 +1,230 @@
+/* start of button and button effect */
+/* button in header */
+.special-btn {
+    background-color: transparent;
+    color: var(--black);
+    width: 10rem;
+    text-align: center;
+    padding: 1rem 0 .5rem;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* button icon, the arrow right */
+.special-btn i {
+    /* margin-bottom: -1rem; */
+    opacity: 0;
+    display: flex;
+    align-self: center;
+    transition: transform 0.3s ease;
+}
+
+/* for the line under button */
+.special-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.175rem;
+    left: 0;
+    bottom: 0;
+    background-color: var(--black);
+}
+
+/* for header button scale and hover effect */
+.special-btn::after {
+    transform: scale(0, 1);
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease;
+}
+
+.special-btn:hover::after {
+    transform: scale(1, 1);
+}
+
+.special-btn:hover i {
+    opacity: 100%;
+}
+
+/* end of button effect */
+
+/* MOBILE VERSION */
+
+.header-title {
+    font-family: var(--font-family-header);
+}
+
+.header-subtitle {
+    font-family: var(--font-family-text);
+}
+
+.content-title {
+    text-align: center;
+    font-family: var(--font-family-header);
+}
+
+.content-subtitle {
+    text-align: center;
+    font-family: var(--font-family-text);
+}
+
+
+/* start of header */
+#container-header {
+    margin-top: 50px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#container-header header {
+    padding: var(--padding-contents-m);
+}
+
+#container-header .header-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+#container-header .header-subtitle {
+    font-size: 1rem;
+    text-align-last: left;
+}
+
+@media (min-width: 768px) {
+    #container-header {
+        margin-top: 0px;
+    }
+
+    #container-header .header-title {
+        font-size: 4rem;
+        text-transform: uppercase;
+    }
+
+    #container-header .header-subtitle {
+        font-size: 1.5rem;
+        text-align-last: left;
+        font-weight: 300;
+    }
+}
+
+/* end of header */
+
+
+/* start of first content */
+#first-content {
+    padding: var(--padding-contents-m);
+    background-color: rgb(151, 151, 151);
+    text-align: center;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+
+/* end of first content  */
+
+
+/* start of second content */
+#second-content {
+    padding: var(--padding-contents-m);
+}
+
+#second-content .container {
+    padding: 0px 20px 50px;
+}
+
+#second-content .row {
+    margin-top: 10px;
+}
+
+#second-content div[class*="content-img"] {
+    margin-top: 10px;
+}
+
+#second-content .row .content-title {
+    text-align: unset;
+}
+
+#second-content .row .content-subtitle {
+    text-align: unset;
+}
+
+/* #second-content .row #second-content-title,
+#second-content .row #second-content-subtitle {
+    text-align: right;
+} */
+
+
+/* end of second content */
+
+/* start of third content */
+#third-content {
+    padding: var(--padding-contents-m);
+}
+
+#third-content .row div[class="img-wrapper"] {
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* end of third content */
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES  */
+/* FIRST CONTENT TABLETS, LAPTOPS, AND DESKTOPS */
+@media (min-width: 768px) {
+    #first-content {
+        background-color: rgb(151, 151, 151);
+    }
+
+    #first-content .row div {
+        padding: 20px 150px 20px;
+    }
+}
+
+@media (min-width: 990px) {
+    #first-content {
+        background-color: rgb(151, 151, 151);
+    }
+
+    #first-content .row div {
+        padding: 20px 150px 20px;
+    }
+}
+
+/* SECOND CONTENT TABLETS, LAPTOPS, AND DESKTOPS */
+@media (min-width: 768px) {
+
+    #second-content .container {
+        padding: 50px 20px 50px;
+    }
+
+    #second-content .row #second-content-title,
+    #second-content .row #second-content-subtitle {
+        text-align: right;
+    }
+}
+
+@media (min-width: 990px) {
+    #second-content .container {
+        padding: 50px 20px 50px;
+    }
+
+    #second-content .row #second-content-title,
+    #second-content .row #second-content-subtitle {
+        text-align: right;
+    }
+}
