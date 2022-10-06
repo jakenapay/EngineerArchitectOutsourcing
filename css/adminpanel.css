@@ -1,0 +1,47 @@
+body {
+    font-family: var(--font-family-text);
+}
+
+.header {
+    margin: 3rem auto;
+}
+
+.header .container .content-title {
+    font-family: var(--font-family-header);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.employee_dashboard div[class*="col"] {
+    padding: 0 0.2rem 0;
+}
+
+
+.employee_dashboard {
+    margin: 5rem 10rem;
+    padding: 1.5rem 3rem;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.employee_dashboard .container {
+    padding: unset;
+    margin: unset;
+}
+
+.input {
+    display: block;
+    margin: 0.2rem 10px 0.2rem;
+    margin-left: unset;
+    padding: 5px 0 5px;
+    padding-left: 0.5rem;
+    width: 100%;
+}
+
+.input[type="file"] {
+    border: 1px solid gray;
+}
+
+.upload {
+    padding: 0.3rem 1.5rem;
+}
