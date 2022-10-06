@@ -1,3 +1,7 @@
+<?php
+include 'php/db_config.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +13,9 @@
 
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- font awesome -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
 
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="./css/adminpanel.css">
@@ -53,85 +60,50 @@
                     <div class="col-sm-12 col-md-12 col-lg-12">
                         <input id="image" class="input" name="image" type="file" required>
                     </div>
-                    <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
+                    <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
+                        <button id="upload" class="upload" name="close" type="button">Close</button>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
                         <button id="upload" class="upload" name="submit" type="submit">Upload</button>
                     </div>
                 </div>
             </form>
         </div>
     </section>
+
+
     <section id="employee_profiles">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                    <div class="wrapper">
-                        <div class="image-container">
-                            <img class="img-fluid emp-image" src="images/profile.jpg" alt="Profile">
+            <div class="row g-0 d-flex justify-content-center">
+                <?php
+                $sql = "SELECT * FROM employee";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                ?>
+                        <div class="col-sm-12 col-md-4 col-lg-4 align-self-center">
+                            <div class="wrapper p-1 m-1 rounded">
+                                <div class="image-container">
+                                    <img class="mt-1 img-fluid emp-image" src="employee_images/<?php echo $row['employee_img'] ?>" alt="Profile">
+                                </div>
+                                <h2 class="content-name"><?php echo $row['employee_lname'] ?>, <?php echo $row['employee_fname'] ?> <?php echo $row['employee_mname'] ?></h2>
+                                <p class="content-position"><?php echo $row['employee_position'] ?></p>
+                                <button id="delete-button" class="button-action"><i class="fas fa-trash"></i> Delete</button>
+                                <button id="update-button" class="button-action"><i class="fas fa-pencil-alt"></i> Update</button>
+                            </div>
                         </div>
-                        <h2 class="content-name">Lorem, ipsum dolor.</h2>
-                        <p class="content-position">Lorem, ipsum.</p>
-                    </div>
-                </div>
+
+                <?php
+                    }
+                } else {
+                    echo "<p>No records.</p>";
+                }
+                ?>
             </div>
         </div>
     </section>
 
-
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Launch demo modal
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add Employee</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form action="php/upload_employee.php" method="post" enctype="multipart/form-data">
-                        <div class="row d-flex justify-content-center">
-                            <?php if (isset($_GET['message'])) : ?>
-                                <div class="col-sm-12 col-md-12 col-lg-12 message-box text-center">
-                                    <p class="content-subtitle"><?php echo $_GET['message']; ?></p>
-                                </div>
-                            <?php endif ?>
-
-                            <div class="col-sm-12 col-md-5 col-lg-5">
-                                <input id="fname" class="input" name="fname" type="text" placeholder="First Name" required>
-                            </div>
-                            <div class="col-sm-12 col-md-5 col-lg-5">
-                                <input id="lname" class="input" name="lname" type="text" placeholder="Last Name" required>
-                            </div>
-                            <div class="col-sm-12 col-md-2 col-lg-2">
-                                <input id="mname" class="input" name="mname" type="text" placeholder="M.i." required>
-                            </div>
-                            <div class="col-sm-12 col-md-12 col-lg-12">
-                                <input id="email" class="input" name="email" type="email" placeholder="Email Address" required>
-                            </div>
-                            <div class="col-sm-12 col-md-12 col-lg-12">
-                                <input id="position" class="input" name="position" type="text" placeholder="Job Position" required>
-                            </div>
-                            <div class="col-sm-12 col-md-12 col-lg-12">
-                                <input id="image" class="input" name="image" type="file" required>
-                            </div>
-                            <div class="col-sm-12 col-md-12 col-lg-12 pt-2">
-                                <button id="upload" class="upload" name="submit" type="submit">Upload</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
 

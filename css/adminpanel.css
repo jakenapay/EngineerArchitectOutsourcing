@@ -13,9 +13,8 @@ body {
 }
 
 #employee_dashboard div[class*="col"] {
-    padding: 0 0.2rem 0;
+    padding: 0 0.3rem 0;
 }
-
 
 #employee_dashboard {
     margin: 5rem 10rem;
@@ -51,6 +50,7 @@ body {
 
 #employee_profiles .wrapper {
     text-align: center;
+    border: 1px solid #787878 !important;
 }
 
 #employee_profiles .image-container {
@@ -72,4 +72,11 @@ body {
 #employee_profiles .content-position {
     font-size: 0.9rem;
     font-family: var(--font-family-text);
+}
+
+#employee_profiles .button-action {
+    padding: 3px 5px;
+    font-size: 15px;
+    border: 1px solid #787878;
+    border-radius: 5px;
 }
