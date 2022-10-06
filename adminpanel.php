@@ -16,17 +16,19 @@
 </head>
 
 <body>
+
     <section class="header">
         <div class="container">
             <h2 class="content-title">
                 Admin Dashboard
             </h2>
+
         </div>
     </section>
     <section class="employee_dashboard">
         <div class="container">
             <form action="php/upload_employee.php" method="post" enctype="multipart/form-data">
-                <div class="row">
+                <div class="row d-flex justify-content-center">
                     <?php if (isset($_GET['message'])) : ?>
                         <div class="col-sm-12 col-md-12 col-lg-12 message-box text-center">
                             <p class="content-subtitle"><?php echo $_GET['message']; ?></p>

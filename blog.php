@@ -6,10 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 
   <title>Architectural & Engineering Outsourcing</title>
@@ -29,11 +27,11 @@
         <img class="nav-logo" src="https://architectoutsourcing.com/wp-content/uploads/2019/05/LOGO-4-2.png" alt="logo">
       </a>
       <ul class="menu">
-        <li><a href="index.html" class="">Home</a></li>
-        <li><a href="about.html" class="">About Us</a></li>
-        <li><a href="service.html" class="">Services</a></li>
-        <li><a href="contact.html" class="">Contact Us</a></li>
-        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="index.php" class="">Home</a></li>
+        <li><a href="about.php" class="">About Us</a></li>
+        <li><a href="service.php" class="">Services</a></li>
+        <li><a href="contact.php" class="">Contact Us</a></li>
+        <li><a href="blog.php" class="active">Blog</a></li>
       </ul>
 
       <button class="hamburger">
@@ -143,9 +141,7 @@
   </div>
 
   <!-- bootstrap javascript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
-    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
   <!-- script of aos -->
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
