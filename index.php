@@ -26,11 +26,11 @@
                 <img class="nav-logo" src="https://architectoutsourcing.com/wp-content/uploads/2019/05/LOGO-4-2.png" alt="logo">
             </a>
             <ul class="menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html" class="">About Us</a></li>
-                <li><a href="service.html" class="">Services</a></li>
-                <li><a href="contact.html" class="">Contact Us</a></li>
-                <li><a href="blog.html" class="">Blog</a></li>
+                <li><a href="index.php" class="active">Home</a></li>
+                <li><a href="about.php" class="">About Us</a></li>
+                <li><a href="service.php" class="">Services</a></li>
+                <li><a href="contact.php" class="">Contact Us</a></li>
+                <li><a href="blog.php" class="">Blog</a></li>
             </ul>
 
             <button class="hamburger">
