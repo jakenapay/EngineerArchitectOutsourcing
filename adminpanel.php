@@ -52,9 +52,6 @@ include 'php/db_config.php';
                         <input id="mname" class="input" name="mname" type="text" placeholder="M.i." required>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-12">
-                        <input id="email" class="input" name="email" type="email" placeholder="Email Address" required>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-12">
                         <input id="position" class="input" name="position" type="text" placeholder="Job Position" required>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-12">
@@ -89,8 +86,11 @@ include 'php/db_config.php';
                                 </div>
                                 <h2 class="content-name"><?php echo $row['employee_lname'] ?>, <?php echo $row['employee_fname'] ?> <?php echo $row['employee_mname'] ?></h2>
                                 <p class="content-position"><?php echo $row['employee_position'] ?></p>
-                                <button id="delete-button" class="button-action"><i class="fas fa-trash"></i> Delete</button>
-                                <button id="update-button" class="button-action"><i class="fas fa-pencil-alt"></i> Update</button>
+                                <button id="delete-button" class="button-action">
+                                    <a href="php/delete.php"><i class=" fas fa-trash"></i> Delete</a>
+                                </button>
+                                <button id="update-button" class="button-action">
+                                    <a href="php/update.php?id=<?php echo $row['employee_id'] ?>"><i class="fas fa-pencil-alt"></i> Update</a></button>
                             </div>
                         </div>
 

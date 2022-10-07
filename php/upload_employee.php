@@ -1,13 +1,12 @@
 <?php
 
-if (isset($_POST['submit']) && isset($_FILES['image']) && isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['mname']) && isset($_POST['email']) && isset($_POST['position'])) {
+if (isset($_POST['submit']) && isset($_FILES['image']) && isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['position'])) {
     include "db_config.php";
 
     // data
     $fname = $_POST['fname'];
     $lname = $_POST['lname'];
     $mname = $_POST['mname'];
-    $email = $_POST['email'];
     $position = $_POST['position'];
 
     // image
