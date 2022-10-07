@@ -1,6 +1,6 @@
 <?php
 
-if (isset($_POST['submit']) && isset($_FILES['image']) && isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['position'])) {
+if (isset($_POST['add_employee']) && isset($_FILES['image']) && isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['position'])) {
     include "db_config.php";
 
     // data

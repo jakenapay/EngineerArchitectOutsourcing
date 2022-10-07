@@ -20,6 +20,11 @@ include 'db_config.php';
     <!-- css -->
     <link rel="stylesheet" type="text/css" href="../css/adminpanel.css">
     <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/update.css">
+
+    <style>
+
+    </style>
 </head>
 
 <body>
@@ -36,39 +41,49 @@ include 'db_config.php';
     <section id="employee_dashboard">
         <div class="container">
             <?php
-            $id = $_GET['id'];
+            $id = $_GET['updateid'];
             $query = "SELECT * FROM employee WHERE employee_id = '$id'";
             $query_run = mysqli_query($conn, $query);
 
             if (mysqli_num_rows($query_run) > 0) {
                 foreach ($query_run as $row) {
+                    session_start();
+                    $_SESSION['uid'] = $row['employee_id'];
             ?>
-                    <form action="php/upload_employee.php" method="post" enctype="multipart/form-data">
+                    <form action="update_process.php" method="post" enctype="multipart/form-data">
                         <div class="row d-flex justify-content-center">
+                            <div class="image-container col-sm-12 col-md-12 col-lg-12 mw-10 pb-1">
+                                <img class="mt-1 img-fluid emp-image" src="../employee_images/<?php echo $row['employee_img'] ?>" alt="Profile">
+                            </div>
+                            <div class="w-100"></div>
                             <div class="col-sm-12 col-md-5 col-lg-5">
+                                <label for="fname">First Name</label>
                                 <input id="fname" class="input" value="<?php echo $row['employee_fname'] ?>" name="fname" type="text" placeholder="First Name" required>
                             </div>
                             <div class="col-sm-12 col-md-5 col-lg-5">
+                                <label for="lname">Last Name</label>
                                 <input id="lname" class="input" value="<?php echo $row['employee_lname'] ?>" name="lname" type="text" placeholder="Last Name" required>
                             </div>
                             <div class="col-sm-12 col-md-2 col-lg-2">
+                                <label for="mname">Middle Initial</label>
                                 <input id="mname" class="input" value="<?php echo $row['employee_mname'] ?>" name="mname" type="text" placeholder="M.i." required>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-12">
+                                <label for="position">Job Position</label>
                                 <input id="position" class="input" value="<?php echo $row['employee_position'] ?>" name="position" type="text" placeholder="Job Position" required>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-12">
-                                <input id="image" class="input" value="<?php echo $row['employee_img'] ?>" name="image" type="file" required>
+                                <label for="image">Profile Picture</label>
+                                <input id="image" class="input" value="<?php echo $row['employee_img'] ?>" name="image" type="file">
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                <button id="upload" class="upload" name="close" type="button">
+                                <button id="upload" class="upload button-action" name="back" type="button">
                                     <a href="../adminpanel.php">Back</a>
                                 </button>
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                                <button id="upload" class="upload" name="submit" type="submit">
-                                    <a href="updateprocess.php">Update</a>
-
+                                <button id="update" class="upload button-action" name="update" type="submit">
+                                    <a href="update_process.php?updateid=<?php echo $row['employee_id'] ?>" onclick="return confirm('Are you sure you want to update?');">Update</a>
                                 </button>
                             </div>
                         </div>

@@ -1,0 +1,9 @@
+.image-container {
+    width: 30%;
+    display: flex;
+    margin: 0 auto !important;
+}
+
+.emp-image {
+    border-radius: 50%;
+}

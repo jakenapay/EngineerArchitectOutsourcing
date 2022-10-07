@@ -43,25 +43,30 @@ include 'php/db_config.php';
                     <?php endif ?>
 
                     <div class="col-sm-12 col-md-5 col-lg-5">
-                        <input id="fname" class="input" name="fname" type="text" placeholder="First Name" required>
+                        <label for="fname">First Name</label>
+                        <input id="fname" class="input" name="fname" type="text" placeholder="First Name*" required>
                     </div>
                     <div class="col-sm-12 col-md-5 col-lg-5">
-                        <input id="lname" class="input" name="lname" type="text" placeholder="Last Name" required>
+                        <label for="lname">Last Name</label>
+                        <input id="lname" class="input" name="lname" type="text" placeholder="Last Name*" required>
                     </div>
                     <div class="col-sm-12 col-md-2 col-lg-2">
-                        <input id="mname" class="input" name="mname" type="text" placeholder="M.i." required>
+                        <label for="mname">Middle Initial</label>
+                        <input id="mname" class="input" name="mname" type="text" placeholder="M.i.">
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-12">
-                        <input id="position" class="input" name="position" type="text" placeholder="Job Position" required>
+                        <label for="position">Job Position</label>
+                        <input id="position" class="input" name="position" type="text" placeholder="Job Position*" required>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-12">
+                        <label for="image">Profile Picture</label>
                         <input id="image" class="input" name="image" type="file" required>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                        <button id="upload" class="upload" name="close" type="button">Close</button>
+                        <button id="upload" class="upload button-action" name="close" type="button">Close</button>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6 pt-2">
-                        <button id="upload" class="upload" name="submit" type="submit">Upload</button>
+                        <button id="upload" class="upload button-action" name="add_employee" type="submit">Add Employee</button>
                     </div>
                 </div>
             </form>
@@ -87,10 +92,10 @@ include 'php/db_config.php';
                                 <h2 class="content-name"><?php echo $row['employee_lname'] ?>, <?php echo $row['employee_fname'] ?> <?php echo $row['employee_mname'] ?></h2>
                                 <p class="content-position"><?php echo $row['employee_position'] ?></p>
                                 <button id="delete-button" class="button-action">
-                                    <a href="php/delete.php"><i class=" fas fa-trash"></i> Delete</a>
+                                    <a href="php/delete.php?deleteid=<?php echo $row['employee_id'] ?>" onclick="return confirm('Are you sure you want to delete?');"><i class="fas fa-trash"></i> Delete</a>
                                 </button>
                                 <button id="update-button" class="button-action">
-                                    <a href="php/update.php?id=<?php echo $row['employee_id'] ?>"><i class="fas fa-pencil-alt"></i> Update</a></button>
+                                    <a href="php/update.php?updateid=<?php echo $row['employee_id'] ?>"><i class="fas fa-pencil-alt"></i> Update</a></button>
                             </div>
                         </div>
 
