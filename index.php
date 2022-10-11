@@ -159,48 +159,44 @@
                         Title
                     </h1>
                 </div>
-                <div class="items">
-                    <div class="item item1">
-                        <i class="fas fa-people-arrows"></i>
-                        <h2 class="fourth-content-title"></h2>
-                        <p class="item-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae eaque nisi
-                            reiciendis soluta ad qui aliquid perferendis explicabo voluptates consequatur!</p>
+                <div class="row mt-5">
+                    <div class="owl-carousel owl-theme text-center">
+                        <div class="item">
+                            <div class="img-wrapper"><img src="images/default-image.png" alt="Blog photo" class="img-fluid"></div>
+                            <h4 class="fourth-content-blog-title p-2 pt-4">Blog title</h4>
+                            <p class="fourth-content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, asperiores earum eius, perferendis aut aperiam dolore fugiat natus repellendus unde incidunt quidem labore at officiis!</p>
+                        </div>
+                        <div class="item">
+                            <div class="img-wrapper"><img src="images/default-image.png" alt="Blog photo" class="img-fluid"></div>
+                            <h4 class="fourth-content-blog-title p-2 pt-4">Blog title</h4>
+                            <p class="fourth-content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, asperiores earum eius, perferendis aut aperiam dolore fugiat natus repellendus unde incidunt quidem labore at officiis!</p>
+                        </div>
+                        <div class="item">
+                            <div class="img-wrapper"><img src="images/default-image.png" alt="Blog photo" class="img-fluid"></div>
+                            <h4 class="fourth-content-blog-title p-2 pt-4">Blog title</h4>
+                            <p class="fourth-content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, asperiores earum eius, perferendis aut aperiam dolore fugiat natus repellendus unde incidunt quidem labore at officiis!</p>
+                        </div>
+                        <div class="item">
+                            <div class="img-wrapper"><img src="images/default-image.png" alt="Blog photo" class="img-fluid"></div>
+                            <h4 class="fourth-content-blog-title p-2 pt-4">Blog title</h4>
+                            <p class="fourth-content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, asperiores earum eius, perferendis aut aperiam dolore fugiat natus repellendus unde incidunt quidem labore at officiis!</p>
+                        </div>
+                        <div class="item">
+                            <div class="img-wrapper"><img src="images/default-image.png" alt="Blog photo" class="img-fluid"></div>
+                            <h4 class="fourth-content-blog-title p-2 pt-4">Blog title</h4>
+                            <p class="fourth-content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, asperiores earum eius, perferendis aut aperiam dolore fugiat natus repellendus unde incidunt quidem labore at officiis!</p>
+                        </div>
+                        <div class="item">
+                            <div class="img-wrapper"><img src="images/default-image.png" alt="Blog photo" class="img-fluid"></div>
+                            <h4 class="fourth-content-blog-title p-2 pt-4">Blog title</h4>
+                            <p class="fourth-content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, asperiores earum eius, perferendis aut aperiam dolore fugiat natus repellendus unde incidunt quidem labore at officiis!</p>
+                        </div>
                     </div>
-                    <div class="item item1">
-                        <i class="fas fa-people-arrows"></i>
-                        <h2 class="fourth-content-title"></h2>
-                        <p class="item-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae eaque nisi
-                            reiciendis soluta ad qui aliquid perferendis explicabo voluptates consequatur!</p>
-                    </div>
-                    <div class="item item1">
-                        <i class="fas fa-people-arrows"></i>
-                        <h2 class="fourth-content-title"></h2>
-                        <p class="item-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae eaque nisi
-                            reiciendis soluta ad qui aliquid perferendis explicabo voluptates consequatur!</p>
-                    </div>
-                    <div class="item item1">
-                        <i class="fas fa-people-arrows"></i>
-                        <h2 class="fourth-content-title"></h2>
-                        <p class="item-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae eaque nisi
-                            reiciendis soluta ad qui aliquid perferendis explicabo voluptates consequatur!</p>
-                    </div>
-                    <div class="item item1">
-                        <i class="fas fa-people-arrows"></i>
-                        <h2 class="fourth-content-title"></h2>
-                        <p class="item-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae eaque nisi
-                            reiciendis soluta ad qui aliquid perferendis explicabo voluptates consequatur!</p>
-                    </div>
-                    <div class="item item1">
-                        <i class="fas fa-people-arrows"></i>
-                        <h2 class="fourth-content-title"></h2>
-                        <p class="item-wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae eaque nisi
-                            reiciendis soluta ad qui aliquid perferendis explicabo voluptates consequatur!</p>
-                    </div>
+                    <a href="#" class="text-center mt-2">See more</a>
+
                 </div>
             </div>
-
         </section>
-
 
         <footer>
             <div class="container">
@@ -272,6 +268,27 @@
     <script>
         AOS.init();
     </script>
+
+    <!-- owl carousel -->
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 3.5
+                }
+            }
+        })
+    </script>
+
     <!-- cdn for font -->
     <script src="https://use.fontawesome.com/984417ca4d.js"></script>
     <script src="js/navbar.js"></script>
