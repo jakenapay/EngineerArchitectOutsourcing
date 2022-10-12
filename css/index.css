@@ -57,7 +57,7 @@ header .header-subtitle {
 .special-btn {
     background-color: transparent;
     color: var(--black);
-    width: 5rem;
+    width: 10rem;
     text-align: center;
     padding: 1rem 0 .5rem;
     outline: none;
