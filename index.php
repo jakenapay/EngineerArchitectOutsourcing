@@ -16,9 +16,10 @@
 
     <title>Architectural & Engineering Outsourcing</title>
     <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="css/index2.css">
 </head>
 
 <body>
@@ -65,7 +66,7 @@
                         <p class="header-subtitle">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae
                             accusamus
                             architecto quibusdam nostrum, aut iure.</p>
-                        <button class="special-btn">Read more<i class="fas fa-arrow-right"></i></i></button>
+                        <button class="special-btn" style="width: 10rem;">Read more<i class="fas fa-arrow-right"></i></i></button>
                     </div>
                 </header>
             </div>
@@ -118,9 +119,14 @@
                         </div>
                     </div>
                     <!-- button for see more -->
-                    <a class="link-button" href="#" target="_blank" rel="noopener noreferrer">
-                        <button class="special-btn">See more</button>
-                    </a>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-12 col-md-3 col-lg-3 ">
+                            <a class="link-button" href="#" target="_blank" rel="noopener noreferrer">
+                                <button class="special-btn">See more</button>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -155,7 +161,7 @@
         <section class="fourth-content">
             <div class="container">
                 <div class="fourth-content-header">
-                    <h1 class="fourth-content-title">
+                    <h1 class="fourth-title text-center">
                         Title
                     </h1>
                 </div>

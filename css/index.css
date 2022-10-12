@@ -57,7 +57,7 @@ header .header-subtitle {
 .special-btn {
     background-color: transparent;
     color: var(--black);
-    width: 10rem;
+    /* width: 10rem; */
     text-align: center;
     padding: 1rem 0 .5rem;
     outline: none;
@@ -181,9 +181,8 @@ header .header-subtitle {
     cursor: pointer;
 
     position: relative;
-    display: flex;
-    justify-content: center;
 }
+
 
 /* END OF SECOND SECTION */
 
@@ -225,6 +224,10 @@ header .header-subtitle {
     padding: var(--padding-contents-m);
 }
 
+.fourth-content .fourth-content-title {
+    font-family: var(--font-family-header);
+}
+
 
 /* --------------------------------------------------------- */
 /* MEDIA QUERY FOR TABLET  */
@@ -263,7 +266,9 @@ header .header-subtitle {
 
 
     /* MEDIA QUERY FOR FOURTH CONTENT */
-
+    .fourth-content .fourth-content-title {
+        font-family: var(--font-family-header);
+    }
 }
 
 /* MEDIA QUERY FOR LAPTOP/DESKTOP */
@@ -308,12 +313,15 @@ header .header-subtitle {
 
 
     /* MEDIA QUERY FOR FOURTH CONTENT */
-    .fourth-content .fourth-content-title {
+    .fourth-content .fourth-title {
         font-size: 3rem;
+        font-family: var(--font-family-header);
+
     }
 
     .fourth-content .item {
         margin: 10px;
+        padding: 10px !important;
     }
 
     .fourth-content .fourth-content-blog-title {
@@ -322,6 +330,7 @@ header .header-subtitle {
 
     .fourth-content .item {
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        border-radius: 5px;
     }
 
 }

@@ -1,0 +1,11 @@
+.fourth-content .item {
+    border-radius: 10px;
+}
+
+.fourth-content .item p {
+    padding: 0 1rem 1rem;
+}
+
+.fourth-content .item h4 {
+    font-size: 1rem;
+}
